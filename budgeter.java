@@ -3,7 +3,7 @@
 
 import java.util.*;
 
-public class Budgeter {
+   public class Budgeter {
    // represents total number of days in a month
    public static final int DAYS_IN_MONTH = 31;
    public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class Budgeter {
       } 
       return totalInput;  
    }
-   
+
    // Reads in and computes total expenses
    // Scanner console: scanner used to retrieve input
    // Returns total monthly or daily expenses based on user's choice
@@ -67,7 +67,7 @@ public class Budgeter {
       System.out.println(); 
       spending(round2(totalIncome), round2(totalExpense));    
    }
-   
+
    // Calculates and prints total amount earned of spent per month.
    // Prints out the spender/saver category the user falls in based
    // on total amount spent or earned per month and an associated message:
@@ -114,4 +114,4 @@ public class Budgeter {
    public static double round2(double num) {
       return Math.round(num * 100.0) / 100.0;
    }  
-} 
+   } 
