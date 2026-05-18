@@ -41,15 +41,15 @@ The domain layer enforces several rules:
 
 Key classes:
 
-- [App.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/App.java): application entry point
-- [Controller.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/ui/Controller.java): coordinates user workflows
-- [View.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/ui/View.java): console prompts and output
-- [ReservationService.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/domain/ReservationService.java): reservation validation and pricing
-- [GuestService.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/domain/GuestService.java): guest validation and operations
-- [HostService.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/domain/HostService.java): host validation and operations
-- [ReservationFileRepository.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/data/ReservationFileRepository.java): reservation persistence
-- [GuestFileRepository.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/data/GuestFileRepository.java): guest persistence
-- [HostFileRepository.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/data/HostFileRepository.java): host persistence
+- [App.java](src/main/java/learn/App.java): application entry point
+- [Controller.java](src/main/java/learn/ui/Controller.java): coordinates user workflows
+- [View.java](src/main/java/learn/ui/View.java): console prompts and output
+- [ReservationService.java](src/main/java/learn/domain/ReservationService.java): reservation validation and pricing
+- [GuestService.java](src/main/java/learn/domain/GuestService.java): guest validation and operations
+- [HostService.java](src/main/java/learn/domain/HostService.java): host validation and operations
+- [ReservationFileRepository.java](src/main/java/learn/data/ReservationFileRepository.java): reservation persistence
+- [GuestFileRepository.java](src/main/java/learn/data/GuestFileRepository.java): guest persistence
+- [HostFileRepository.java](src/main/java/learn/data/HostFileRepository.java): host persistence
 
 ## Data Storage
 
@@ -59,7 +59,7 @@ The application uses CSV files stored in the `data/` directory:
 - `data/hosts.csv`: host records
 - `data/reservations/`: one reservation file per host, named with the host id
 
-Runtime paths are configured in [application.properties](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/resources/application.properties):
+Runtime paths are configured in `src/main/resources/application.properties`:
 
 - `data.guest.path=data/guests.csv`
 - `data.host.path=data/hosts.csv`
@@ -81,7 +81,8 @@ mvn compile
 mvn exec:java -Dexec.mainClass="learn.house.App"
 ```
 
-If you prefer, you can also run the `main` method in [App.java](/Users/dosa/Documents/repositories/module05-mastery-project-dont-wreck-my-house-fardouse-1/src/main/java/learn/house/App.java) from your IDE.
+You can also run the `main` method in [App.java](src/main/java/learn/App.java) directly from your IDE.
+
 
 ## Running Tests
 
